@@ -132,22 +132,18 @@ class ViewController: UIViewController {
         DispatchQueue.main.async {
             //TODO SELFSERVICE: state 1
 
-            //DONE CENTRAL: buttondefault
-            self.centralizedButton.isEnabled = false
+            //TODO CENTRAL: buttondefault
+
             //TODO SUSPENDED: status
 
 
-            //DONE CENTRAL: status
-            if let _ = FRUser.currentUser /* TODO SELFSERVICE: state 2 */     {
-                self.statusLabel?.text = "User is authenticated"
-                self.nextButton.setTitle("Logout", for: .normal)
+            //TODO CENTRAL: status
+                        /* TODO SELFSERVICE: state 2 */
+
+
                 //TODO SELFSERVICE: state 3
 
-            } else {
-                self.centralizedButton.isEnabled = true
-                self.statusLabel?.text = "User is not authenticated"
-                self.nextButton.setTitle("Next", for: .normal)
-            }
+
         }
     }
 
@@ -174,26 +170,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func centralizedButtonPressed(sender: UIButton) {
-        //DONE CENTR: browser
-        FRUser.browser()?
-            .set(presentingViewController: self)
-            .set(browserType: .authSession)
-            .build()
-            .login { (user, error) in
-                if let error = error {
-                    FRLog.e(error.localizedDescription)
-                } else if let user = user {
-                    //Handle authenticated status
-                    let encoder = JSONEncoder()
-                    encoder.outputFormatting = .prettyPrinted
-                    if let token = user.token, let data = try? encoder.encode(token), let jsonAccessToken = String(data: data, encoding: .utf8) {
-                        FRLog.i("accesstoken: \(jsonAccessToken)")
-                    }
-                    DispatchQueue.main.async {
-                        self.updateStatus()
-                    }
-                }
-            }
+        //TODO CENTR: browser
+
+
     }
 
     @IBAction func chgPwdButtonPressed(sender: UIButton) {
@@ -210,9 +189,9 @@ class ViewController: UIViewController {
         //TODO FOLLOW: currentnode
 
 
-        //DONE CENTRAL: success
-        if let _ = user {
-            print("User is authenticated")
+        //TODO CENTRAL: success
+//        if let _ = user {
+
 
             //TODO SELFSERVICE: state 5
 
@@ -220,10 +199,10 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
                 self.updateStatus()
             }
-        }
+ 
 
         //TODO AUTH: handleCallbacks
-        else if let node = node {
+ //      } else if let node = node {
 
             //            print("Node object received, handle the node, first callback \(String(describing: node.callbacks.first?.type))")
             //            DispatchQueue.main.async {

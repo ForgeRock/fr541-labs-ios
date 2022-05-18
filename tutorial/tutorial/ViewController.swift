@@ -279,7 +279,7 @@ class ViewController: UIViewController {
 
                     //TODO SELFSERVICE: handle
 
-                    
+
 
                 }
 
@@ -315,22 +315,10 @@ class ViewController: UIViewController {
                             self.loginStackView.addArrangedSubview(textField)
                             self.textFieldArray.append(textField)
                         }
-                        //DONE REGISTER: attributes
-                        else if let attrCallback = callback as? StringAttributeInputCallback {
+                        
+                        //TODO REGISTER: attributes
 
-                            let textField = UITextField(frame: CGRect.zero)
-                            textField.autocorrectionType = .no
-                            textField.translatesAutoresizingMaskIntoConstraints = false
-                            textField.backgroundColor = .white
-                            textField.textColor = .black
-                            textField.autocapitalizationType = .none
-                            textField.borderStyle = .roundedRect
 
-                            textField.placeholder = attrCallback.prompt
-                            self.loginStackView.addArrangedSubview(textField)
-                            self.textFieldArray.append(textField)
-
-                        }
 
                         //TODO SOCIAL: handle selectidpcallback
 

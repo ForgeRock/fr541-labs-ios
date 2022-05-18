@@ -12,8 +12,7 @@ import FRAuth
 //TODO WEBAUTHN: protocols
 class ViewController: UIViewController {
 
-    //DONE SUSPENDED: variable
-    var isSuspended = false
+    //TODO SUSPENDED: variable
 
     //DONE FOLLOW: variable
     private var currentNode: Node?
@@ -95,8 +94,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        //DONE SUSPENDED: observer
-        NotificationCenter.default.addObserver(self, selector: #selector(resumeFromEmail), name: NSNotification.Name("resumeFromEmail"), object: nil)
+        //TODO SUSPENDED: observer
+        
 
         //DONE SELFSERVICE: interceptor
         FRRequestInterceptorRegistry.shared.registerInterceptors(interceptors: [ForceAuthInterceptor()])
@@ -127,11 +126,8 @@ class ViewController: UIViewController {
         updateStatus()
     }
 
-    //DONE SUSPENDED: resume
-    @objc func resumeFromEmail() {
-        self.isSuspended = false
-        updateStatus()
-    }
+    //TODO SUSPENDED: resume
+
 
     func updateStatus() {
         DispatchQueue.main.async {
@@ -139,14 +135,11 @@ class ViewController: UIViewController {
             self.chgPwdButton.isEnabled = false
             //DONE CENTRAL: buttondefault
             self.centralizedButton.isEnabled = false
-            //DONE SUSPENDED: status
-            if self.isSuspended {
-                self.statusLabel?.text = "Check your email"
-                self.nextButton.isEnabled = false
-                self.nextButton.setTitle("suspended", for: .disabled)
-            }
+            //TODO SUSPENDED: status
+
+
             //DONE CENTRAL: status
-            else if let _ = FRUser.currentUser /* DONE SELFSERVICE: state 2 */, !self.isChangingPwd {
+            if let _ = FRUser.currentUser /* DONE SELFSERVICE: state 2 */, !self.isChangingPwd {
                 self.statusLabel?.text = "User is authenticated"
                 self.nextButton.setTitle("Logout", for: .normal)
                 //DONE SELFSERVICE: state 3
@@ -383,7 +376,7 @@ class ViewController: UIViewController {
 
 
                         //TODO SOCIAL: handle IdPCallback
-                        
+
 
                         //TODO DEVICE: we need a choiceCallback to simulate 2nd factor
 
@@ -405,11 +398,8 @@ class ViewController: UIViewController {
 
 
 
-                        //DONE SUSPENDED: add handler
-                        else if let _ = callback as? SuspendedTextOutputCallback {
-                            self.isSuspended = true
-                            self.updateStatus()
-                        }
+                        //TODO SUSPENDED: add handler
+
 
 
                     }

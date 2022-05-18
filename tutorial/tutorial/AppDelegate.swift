@@ -36,16 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Browser.validateBrowserLogin(url: url)
             return true
 
-        //DONE SUSPENDED
-        } else if let _ = url.valueOf("suspendedId") {
-            FRSession.authenticate(resumeURI: url) { (token: Token?, node, error) in
-                print("token: \(String(describing: token)), error: \(String(describing: error) )")
-                //  Handle Node, or the result of continuing the the authentication flow
-                NotificationCenter.default.post(name: NSNotification.Name("resumeFromEmail"), object: nil)
 
-            }
-            return true
-        } else {
+        } //TODO SUSPENDED
+
+        else {
             return false
         }
     }

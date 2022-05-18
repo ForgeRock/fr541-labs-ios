@@ -379,26 +379,11 @@ class ViewController: UIViewController {
 
                         }
 
-                        //DONE SOCIAL: handle selectidpcallback
-                        else if let selectIdPCallback = callback as? SelectIdPCallback {
-                            let providersArray = selectIdPCallback.providers
-                            //OPTIONAL: let users select
-                            print("Provider:  \(providersArray[1].provider)")
-                            selectIdPCallback.setProvider(provider: providersArray[1])
-                            node.next { (user: FRUser?, node, error) in
-                                self.handleNode(user: user, node: node, error: error)
-                            }
-                        }
+                        //TODO SOCIAL: handle selectidpcallback
 
-                        //DONE SOCIAL: handle IdPCallback
-                        else if let idPCallback = node.callbacks.first as? IdPCallback {
-                            idPCallback.signIn (handler: nil, presentingViewController: self) { (token: String?, tokenType: String?, error: Error?) in
-                                node.next { (user: FRUser?, node, error) in
-                                    self.handleNode(user: user, node: node, error: error)
-                                }
-                            }
 
-                        }
+                        //TODO SOCIAL: handle IdPCallback
+                        
 
                         //TODO DEVICE: we need a choiceCallback to simulate 2nd factor
 

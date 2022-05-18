@@ -14,8 +14,8 @@ class ViewController: UIViewController {
 
     //TODO SUSPENDED: variable
 
-    //DONE FOLLOW: variable
-    private var currentNode: Node?
+    //TODO FOLLOW: variable
+
 
     //TODO SELFSERVICE: variable
 
@@ -100,7 +100,7 @@ class ViewController: UIViewController {
         //TODO SELFSERVICE: interceptor
 
         do {
-            //DONE AUTH: init
+            //TODO AUTH: init
             FRLog.setLogLevel(.all)
             try FRAuth.start()
             FRLog.i("SDK started")
@@ -121,7 +121,7 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //DONE AUTH: updateAppear
+        //TODO AUTH: updateAppear
         updateStatus()
     }
 
@@ -154,32 +154,22 @@ class ViewController: UIViewController {
     @IBAction func nextButtonPressed(sender: UIButton) {
         print("Next button is pressed")
 
-        //DONE AUTH: login or logout
+        //TODO AUTH: login or logout
         if let user = FRUser.currentUser /* TODO SELFSERVICE: state 4 */    {
-            user.logout()
-            self.updateStatus()
+
+
         } else {
-            if currentNode == nil { //MARK AUTH: startLogin
-                FRUser.login {(user: FRUser?, node, error) in
-                    self.handleNode(user: user, node: node, error: error)
-                }
-            } else { //MARK AUTH: inProgress
-                guard let thisNode = currentNode else { return }
-                var index = 0
-                for textField in textFieldArray {
-                    if let thisCallback: SingleValueCallback = thisNode.callbacks[index] as? SingleValueCallback {
-                        thisCallback.setValue(textField.text)
-                    }
-                    index += 1
-                }
+            //            if currentNode == nil { //MARK AUTH: startLogin
 
-                self.textFieldArray = [UITextField]()
-                self.loginStackView.removeAllArrangedSubviews()
 
-                thisNode.next { (user: FRUser?, node, error) in
-                    self.handleNode(user: user, node: node, error: error)
-                }
-            }
+
+            //            } else { //MARK AUTH: inProgress
+
+
+
+
+
+            //            }
         }
     }
     
@@ -217,8 +207,8 @@ class ViewController: UIViewController {
 
     func handleNode(user: FRUser?, node: Node?, error: Error?) {
 
-        //DONE FOLLOW: currentnode
-        self.currentNode = node
+        //TODO FOLLOW: currentnode
+
 
         //DONE CENTRAL: success
         if let _ = user {
@@ -232,92 +222,48 @@ class ViewController: UIViewController {
             }
         }
 
-        //DONE AUTH: handleCallbacks
+        //TODO AUTH: handleCallbacks
         else if let node = node {
 
-            print("Node object received, handle the node, first callback \(String(describing: node.callbacks.first?.type))")
-            DispatchQueue.main.async {
+            //            print("Node object received, handle the node, first callback \(String(describing: node.callbacks.first?.type))")
+            //            DispatchQueue.main.async {
 
 
-                //TODO STAGE: if
+            //TODO STAGE: if
 
 
-                    //TODO SELFSERVICE: handle
-
-
-
-
-
-                    //MARK AUTH:
-                    for callback: Callback in node.callbacks {
-                        if let nameCallback = callback as? NameCallback {
-
-                            let textField = UITextField(frame: CGRect.zero)
-                            textField.autocorrectionType = .no
-                            textField.translatesAutoresizingMaskIntoConstraints = false
-                            textField.backgroundColor = .white
-                            textField.textColor = .black
-                            textField.autocapitalizationType = .none
-                            textField.borderStyle = .roundedRect
-
-                            textField.placeholder = nameCallback.prompt
-                            self.loginStackView.addArrangedSubview(textField)
-                            self.textFieldArray.append(textField)
-
-                        }
-                        else if let passwordCallback = callback as? PasswordCallback {
-                            let textField = UITextField(frame: CGRect.zero)
-                            textField.autocorrectionType = .no
-                            textField.translatesAutoresizingMaskIntoConstraints = false
-                            textField.backgroundColor = .white
-                            textField.textColor = .black
-                            textField.autocapitalizationType = .none
-                            textField.borderStyle = .roundedRect
-                            //textField.isSecureTextEntry = true
-                            textField.placeholder = passwordCallback.prompt
-                            self.loginStackView.addArrangedSubview(textField)
-                            self.textFieldArray.append(textField)
-                        }
-
-                        //TODO REGISTER: attributes
-
-
-
-                        //TODO SOCIAL: handle selectidpcallback
-
-
-                        //TODO SOCIAL: handle IdPCallback
-
-
-                        //TODO DEVICE: we need a choiceCallback to simulate 2nd factor
+            //TODO SELFSERVICE: handle
 
 
 
 
 
-                        //TODO WEBAUTHN: handle registration
+            //MARK AUTH:
+            // for loop will come here
 
 
+            //TODO REGISTER: attributes
 
-                        //TODO WEBATUHN: handle authentication
-                        
+            //TODO SOCIAL: handle selectidpcallback
 
-                        //TODO DEVICE: add handler
+            //TODO SOCIAL: handle IdPCallback
 
-                            //TODO CUSTOMDEVICE
+            //TODO DEVICE: we need a choiceCallback to simulate 2nd factor
+
+            //TODO WEBAUTHN: handle registration
+
+            //TODO WEBATUHN: handle authentication
+
+            //TODO DEVICE: add handler
+
+            //TODO CUSTOMDEVICE
+
+            //TODO SUSPENDED: add handler
 
 
+            //end of for loop:             }
 
-
-                        //TODO SUSPENDED: add handler
-
-
-
-                    }
-
-                //TODO STAGE: else ends here:   }
-
-            }
+            //TODO STAGE: else ends here:   }
 
         } else {
             print ("Something went wrong: \(String(describing: error))")

@@ -9,8 +9,8 @@ import UIKit
 //DONE INIT: import FRAuth
 import FRAuth
 
-//DONE WEBAUTHN: protocols
-class ViewController: UIViewController, PlatformAuthenticatorRegistrationDelegate, PlatformAuthenticatorAuthenticationDelegate {
+//TODO WEBAUTHN: protocols
+class ViewController: UIViewController {
 
     //DONE SUSPENDED: variable
     var isSuspended = false
@@ -406,47 +406,12 @@ class ViewController: UIViewController, PlatformAuthenticatorRegistrationDelegat
 
 
 
-                        //DONE WEBAUTHN: handle registration
-                        else if let webAuthnRegistrationCallback = callback as? WebAuthnRegistrationCallback {
-                            webAuthnRegistrationCallback.delegate = self
-                            webAuthnRegistrationCallback.register(node: node) { (attestation) in
-                                node.next { (user: FRUser?, node, error) in
-                                    self.handleNode(user: user, node: node, error: error)
-                                }
-                            } onError: { (error) in
-                                let alert = UIAlertController(title: "WebAuthnError", message: "Something went wrong registering the device", preferredStyle: .alert)
-                                let okAction = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                                    node.next { (user: FRUser?, node, error) in
-                                        self.handleNode(user: user, node: node, error: error)
-                                    }
-                                })
-                                alert.addAction(okAction)
-                                DispatchQueue.main.async {
-                                    self.present(alert, animated: true, completion: nil)
-                                }
-                            }
-                        }
+                        //TODO WEBAUTHN: handle registration
 
-                        //DONE WEBATUHN: handle authentication
-                        else if let authenticationCallback = callback as? WebAuthnAuthenticationCallback {
-                            authenticationCallback.delegate = self
-                            authenticationCallback.authenticate(node: node) { (assertion) in
-                                node.next { (user: FRUser?, node, error) in
-                                    self.handleNode(user: user, node: node, error: error)
-                                }
-                            } onError: { error in
-                                let alert = UIAlertController(title: "WebAuthnError", message: "Something went wrong authenticating the device", preferredStyle: .alert)
-                                let okAction = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                                    node.next { (user: FRUser?, node, error) in
-                                        self.handleNode(user: user, node: node, error: error)
-                                    }
-                                })
-                                alert.addAction(okAction)
-                                DispatchQueue.main.async {
-                                    self.present(alert, animated: true, completion: nil)
-                                }
-                            }
-                        }
+
+
+                        //TODO WEBATUHN: handle authentication
+                        
 
                         //TODO DEVICE: add handler
 

@@ -17,8 +17,8 @@ class ViewController: UIViewController {
     //DONE FOLLOW: variable
     private var currentNode: Node?
 
-    //DONE SELFSERVICE: variable
-    var isChangingPwd = false
+    //TODO SELFSERVICE: variable
+
 
     //MARK WEBAUTHN: implement necessary registration functions
     func excludeCredentialDescriptorConsent(consentCallback: @escaping WebAuthnUserConsentCallback) {
@@ -97,8 +97,7 @@ class ViewController: UIViewController {
         //TODO SUSPENDED: observer
         
 
-        //DONE SELFSERVICE: interceptor
-        FRRequestInterceptorRegistry.shared.registerInterceptors(interceptors: [ForceAuthInterceptor()])
+        //TODO SELFSERVICE: interceptor
 
         do {
             //DONE AUTH: init
@@ -131,19 +130,19 @@ class ViewController: UIViewController {
 
     func updateStatus() {
         DispatchQueue.main.async {
-            //DONE SELFSERVICE: state 1
-            self.chgPwdButton.isEnabled = false
+            //TODO SELFSERVICE: state 1
+
             //DONE CENTRAL: buttondefault
             self.centralizedButton.isEnabled = false
             //TODO SUSPENDED: status
 
 
             //DONE CENTRAL: status
-            if let _ = FRUser.currentUser /* DONE SELFSERVICE: state 2 */, !self.isChangingPwd {
+            if let _ = FRUser.currentUser /* TODO SELFSERVICE: state 2 */     {
                 self.statusLabel?.text = "User is authenticated"
                 self.nextButton.setTitle("Logout", for: .normal)
-                //DONE SELFSERVICE: state 3
-                self.chgPwdButton.isEnabled = true
+                //TODO SELFSERVICE: state 3
+
             } else {
                 self.centralizedButton.isEnabled = true
                 self.statusLabel?.text = "User is not authenticated"
@@ -156,7 +155,7 @@ class ViewController: UIViewController {
         print("Next button is pressed")
 
         //DONE AUTH: login or logout
-        if let user = FRUser.currentUser /* DONE SELFSERVICE: state 4 */, !isChangingPwd {
+        if let user = FRUser.currentUser /* TODO SELFSERVICE: state 4 */    {
             user.logout()
             self.updateStatus()
         } else {
@@ -208,24 +207,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func chgPwdButtonPressed(sender: UIButton) {
-        //DONE SELFSERVICE: init
+        //TODO SELFSERVICE: init
 
-        if !isChangingPwd {
-            isChangingPwd = true
-            self.nextButton.setTitle("Next", for: .normal)
 
-            FRSession.authenticate(authIndexValue: "fr541-password-ios", authIndexType: "service") {(token: Token?, node, error) in
-                if let _ = token {
-                    DispatchQueue.main.async {
-                        self.statusLabel.text = "Password changed"
-                        self.isChangingPwd = false
-                    }
-                    FRLog.i("password change success, token: \(String(describing: token))")
-                } else {
-                    self.handleNode(user: nil , node: node, error: error)
-                }
-            }
-        }
+
+
     }
 
 
@@ -238,8 +224,8 @@ class ViewController: UIViewController {
         if let _ = user {
             print("User is authenticated")
 
-            //DONE SELFSERVICE: state 5
-            self.isChangingPwd = false
+            //TODO SELFSERVICE: state 5
+
 
             DispatchQueue.main.async {
                 self.updateStatus()
@@ -291,35 +277,9 @@ class ViewController: UIViewController {
                         }
                     }
 
-                    //DONE SELFSERVICE: handle
-                    else if stage == "pwdchange" {
-                        let oldPwdField = UITextField(frame: CGRect.zero)
-                        oldPwdField.autocorrectionType = .no
-                        oldPwdField.translatesAutoresizingMaskIntoConstraints = false
-                        oldPwdField.backgroundColor = .white
-                        oldPwdField.textColor = .black
-                        oldPwdField.autocapitalizationType = .none
-                        oldPwdField.borderStyle = .roundedRect
+                    //TODO SELFSERVICE: handle
 
-                        oldPwdField.placeholder = "Enter current password"
-                        //oldPwdField.isSecureTextEntry = true
-
-                        self.loginStackView.addArrangedSubview(oldPwdField)
-                        self.textFieldArray.append(oldPwdField)
-
-                        let newPwdField = UITextField(frame: CGRect.zero)
-                        newPwdField.autocorrectionType = .no
-                        newPwdField.translatesAutoresizingMaskIntoConstraints = false
-                        newPwdField.backgroundColor = .white
-                        newPwdField.textColor = .black
-                        newPwdField.autocapitalizationType = .none
-                        newPwdField.borderStyle = .roundedRect
-                        newPwdField.placeholder = "Enter new password"
-
-                        //newPwdField.isSecureTextEntry = true
-                        self.loginStackView.addArrangedSubview(newPwdField)
-                        self.textFieldArray.append(newPwdField)
-                    }
+                    
 
                 }
 

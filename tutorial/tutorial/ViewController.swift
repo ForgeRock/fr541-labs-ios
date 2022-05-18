@@ -108,10 +108,8 @@ class ViewController: UIViewController, PlatformAuthenticatorRegistrationDelegat
             FRLog.i("SDK started")
             print("SDK initialized successfully")
 
-            //DONE DEVICE: manually
-            FRDevice.currentDevice?.getProfile() { deviceProfile in
-                print(deviceProfile)
-            }
+            //TODO DEVICE: manually
+
 
             //TODO TAMPER
 
@@ -402,25 +400,8 @@ class ViewController: UIViewController, PlatformAuthenticatorRegistrationDelegat
 
                         }
 
-                        //DONE DEVICE: we need a choiceCallback to simulate 2nd factor
-                        else if let choiceCallback = callback as? ChoiceCallback {
-                            let alert = UIAlertController(title: "Choice", message: choiceCallback.prompt, preferredStyle: .alert)
-                            for choice in choiceCallback.choices {
-                                let action = UIAlertAction(title: choice, style: .default) { (action) in
-                                    if let title = action.title, let index = choiceCallback.choices.firstIndex(of: title) {
-                                        choiceCallback.setValue(index)
-                                        node.next { (user: FRUser?, node, error) in
-                                            self.handleNode(user: user, node: node, error: error)
-                                        }
-                                    }
-                                }
-                                alert.addAction(action)
-                            }
+                        //TODO DEVICE: we need a choiceCallback to simulate 2nd factor
 
-                            DispatchQueue.main.async {
-                                self.present(alert, animated: true, completion: nil)
-                            }
-                        }
 
 
 
@@ -467,19 +448,12 @@ class ViewController: UIViewController, PlatformAuthenticatorRegistrationDelegat
                             }
                         }
 
-                        //DONE DEVICE: add handler
-                        else if let deviceProfileCallback = callback as? DeviceProfileCallback {
+                        //TODO DEVICE: add handler
 
                             //TODO CUSTOMDEVICE
 
 
-                            deviceProfileCallback.execute { _ in
-                                node.next { (user: FRUser?, node, error) in
-                                    self.handleNode(user: user, node: node, error: error)
-                                }
-                            }
 
-                        }
 
                         //DONE SUSPENDED: add handler
                         else if let _ = callback as? SuspendedTextOutputCallback {

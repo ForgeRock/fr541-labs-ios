@@ -113,10 +113,9 @@ class ViewController: UIViewController, PlatformAuthenticatorRegistrationDelegat
                 print(deviceProfile)
             }
 
-            //DONE TAMPER
-            let jailbrokenScore = FRJailbreakDetector.shared.analyze()
-            FRLog.i("Jailbreak Score: \(jailbrokenScore)")
-            print("Jailbreak Score: \(jailbrokenScore)")
+            //TODO TAMPER
+
+
         }
         catch {
             FRLog.e(error.localizedDescription)
@@ -471,8 +470,8 @@ class ViewController: UIViewController, PlatformAuthenticatorRegistrationDelegat
                         //DONE DEVICE: add handler
                         else if let deviceProfileCallback = callback as? DeviceProfileCallback {
 
-                            //DONE CUSTOMDEVICE
-                            deviceProfileCallback.profileCollector.collectors.append(MyDeviceCollector())
+                            //TODO CUSTOMDEVICE
+
 
                             deviceProfileCallback.execute { _ in
                                 node.next { (user: FRUser?, node, error) in

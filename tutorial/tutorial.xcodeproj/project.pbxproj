@@ -20,7 +20,6 @@
 		F4B69CB52816E1D700BE05A3 /* FRProximity in Frameworks */ = {isa = PBXBuildFile; productRef = F4B69CB42816E1D700BE05A3 /* FRProximity */; };
 		F4BE82E72809AE8D0088FBB2 /* FRGoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = F4BE82E62809AE8D0088FBB2 /* FRGoogleSignIn */; };
 		F4D2B8EA28215A41004A4700 /* ForceAuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2B8E928215A41004A4700 /* ForceAuthInterceptor.swift */; };
-		F4DFA4572822D800003ED3A8 /* MyDeviceCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DFA4562822D800003ED3A8 /* MyDeviceCollector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 		F4905BE82811ADE400575C8C /* UIStackViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExt.swift; sourceTree = "<group>"; };
 		F4A1E2B6281D30E200EC680E /* tutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tutorial.entitlements; sourceTree = "<group>"; };
 		F4D2B8E928215A41004A4700 /* ForceAuthInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceAuthInterceptor.swift; sourceTree = "<group>"; };
-		F4DFA4562822D800003ED3A8 /* MyDeviceCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDeviceCollector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +81,6 @@
 				F4646BA12806047300F2B283 /* FRAuthConfig.plist */,
 				F4905BE82811ADE400575C8C /* UIStackViewExt.swift */,
 				F4D2B8E928215A41004A4700 /* ForceAuthInterceptor.swift */,
-				F4DFA4562822D800003ED3A8 /* MyDeviceCollector.swift */,
 			);
 			path = tutorial;
 			sourceTree = "<group>";
@@ -173,7 +170,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4DFA4572822D800003ED3A8 /* MyDeviceCollector.swift in Sources */,
 				F4646B8D2806035900F2B283 /* ViewController.swift in Sources */,
 				F4D2B8EA28215A41004A4700 /* ForceAuthInterceptor.swift in Sources */,
 				F4646B892806035900F2B283 /* AppDelegate.swift in Sources */,

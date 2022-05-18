@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4646B892806035900F2B283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4646B882806035900F2B283 /* AppDelegate.swift */; };
+		F4646B8D2806035900F2B283 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4646B8C2806035900F2B283 /* ViewController.swift */; };
+		F4646B902806035900F2B283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4646B8E2806035900F2B283 /* Main.storyboard */; };
+		F4646B922806035A00F2B283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4646B912806035A00F2B283 /* Assets.xcassets */; };
+		F4646B952806035A00F2B283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4646B932806035A00F2B283 /* LaunchScreen.storyboard */; };
+		F4646B9E280603A500F2B283 /* FRAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F4646B9D280603A500F2B283 /* FRAuth */; };
+		F4646BA0280603A500F2B283 /* FRCore in Frameworks */ = {isa = PBXBuildFile; productRef = F4646B9F280603A500F2B283 /* FRCore */; };
+		F4646BA22806047300F2B283 /* FRAuthConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4646BA12806047300F2B283 /* FRAuthConfig.plist */; };
+		F4905BE92811ADE400575C8C /* UIStackViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4905BE82811ADE400575C8C /* UIStackViewExt.swift */; };
+		F4A1E2B1281C029800EC680E /* FRAuthenticator in Frameworks */ = {isa = PBXBuildFile; productRef = F4A1E2B0281C029800EC680E /* FRAuthenticator */; };
+		F4B69CB52816E1D700BE05A3 /* FRProximity in Frameworks */ = {isa = PBXBuildFile; productRef = F4B69CB42816E1D700BE05A3 /* FRProximity */; };
+		F4BE82E72809AE8D0088FBB2 /* FRGoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = F4BE82E62809AE8D0088FBB2 /* FRGoogleSignIn */; };
+		F4D2B8EA28215A41004A4700 /* ForceAuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2B8E928215A41004A4700 /* ForceAuthInterceptor.swift */; };
+		F4DFA4572822D800003ED3A8 /* MyDeviceCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DFA4562822D800003ED3A8 /* MyDeviceCollector.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F4646B852806035900F2B283 /* tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4646B882806035900F2B283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4646B8C2806035900F2B283 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F4646B8F2806035900F2B283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4646B912806035A00F2B283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4646B942806035A00F2B283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4646B962806035A00F2B283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4646BA12806047300F2B283 /* FRAuthConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FRAuthConfig.plist; sourceTree = "<group>"; };
+		F4905BE82811ADE400575C8C /* UIStackViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExt.swift; sourceTree = "<group>"; };
+		F4A1E2B6281D30E200EC680E /* tutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tutorial.entitlements; sourceTree = "<group>"; };
+		F4D2B8E928215A41004A4700 /* ForceAuthInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceAuthInterceptor.swift; sourceTree = "<group>"; };
+		F4DFA4562822D800003ED3A8 /* MyDeviceCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDeviceCollector.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4646B822806035900F2B283 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4B69CB52816E1D700BE05A3 /* FRProximity in Frameworks */,
+				F4646B9E280603A500F2B283 /* FRAuth in Frameworks */,
+				F4BE82E72809AE8D0088FBB2 /* FRGoogleSignIn in Frameworks */,
+				F4646BA0280603A500F2B283 /* FRCore in Frameworks */,
+				F4A1E2B1281C029800EC680E /* FRAuthenticator in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4646B7C2806035900F2B283 = {
+			isa = PBXGroup;
+			children = (
+				F4646B872806035900F2B283 /* tutorial */,
+				F4646B862806035900F2B283 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4646B862806035900F2B283 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4646B852806035900F2B283 /* tutorial.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4646B872806035900F2B283 /* tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				F4A1E2B6281D30E200EC680E /* tutorial.entitlements */,
+				F4646B882806035900F2B283 /* AppDelegate.swift */,
+				F4646B8C2806035900F2B283 /* ViewController.swift */,
+				F4646B8E2806035900F2B283 /* Main.storyboard */,
+				F4646B912806035A00F2B283 /* Assets.xcassets */,
+				F4646B932806035A00F2B283 /* LaunchScreen.storyboard */,
+				F4646B962806035A00F2B283 /* Info.plist */,
+				F4646BA12806047300F2B283 /* FRAuthConfig.plist */,
+				F4905BE82811ADE400575C8C /* UIStackViewExt.swift */,
+				F4D2B8E928215A41004A4700 /* ForceAuthInterceptor.swift */,
+				F4DFA4562822D800003ED3A8 /* MyDeviceCollector.swift */,
+			);
+			path = tutorial;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4646B842806035900F2B283 /* tutorial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4646B992806035A00F2B283 /* Build configuration list for PBXNativeTarget "tutorial" */;
+			buildPhases = (
+				F4646B812806035900F2B283 /* Sources */,
+				F4646B822806035900F2B283 /* Frameworks */,
+				F4646B832806035900F2B283 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tutorial;
+			packageProductDependencies = (
+				F4646B9D280603A500F2B283 /* FRAuth */,
+				F4646B9F280603A500F2B283 /* FRCore */,
+				F4BE82E62809AE8D0088FBB2 /* FRGoogleSignIn */,
+				F4B69CB42816E1D700BE05A3 /* FRProximity */,
+				F4A1E2B0281C029800EC680E /* FRAuthenticator */,
+			);
+			productName = tutorial;
+			productReference = F4646B852806035900F2B283 /* tutorial.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4646B7D2806035900F2B283 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					F4646B842806035900F2B283 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = F4646B802806035900F2B283 /* Build configuration list for PBXProject "tutorial" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4646B7C2806035900F2B283;
+			packageReferences = (
+				F4646B9C280603A500F2B283 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */,
+				F4BE82E52809AE8D0088FBB2 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */,
+				F4B69CB32816E1D700BE05A3 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */,
+				F4A1E2AF281C029800EC680E /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */,
+			);
+			productRefGroup = F4646B862806035900F2B283 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4646B842806035900F2B283 /* tutorial */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4646B832806035900F2B283 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4646BA22806047300F2B283 /* FRAuthConfig.plist in Resources */,
+				F4646B952806035A00F2B283 /* LaunchScreen.storyboard in Resources */,
+				F4646B922806035A00F2B283 /* Assets.xcassets in Resources */,
+				F4646B902806035900F2B283 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4646B812806035900F2B283 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4DFA4572822D800003ED3A8 /* MyDeviceCollector.swift in Sources */,
+				F4646B8D2806035900F2B283 /* ViewController.swift in Sources */,
+				F4D2B8EA28215A41004A4700 /* ForceAuthInterceptor.swift in Sources */,
+				F4646B892806035900F2B283 /* AppDelegate.swift in Sources */,
+				F4905BE92811ADE400575C8C /* UIStackViewExt.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F4646B8E2806035900F2B283 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4646B8F2806035900F2B283 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F4646B932806035A00F2B283 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4646B942806035A00F2B283 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4646B972806035A00F2B283 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F4646B982806035A00F2B283 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4646B9A2806035A00F2B283 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = tutorial/tutorial.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = tutorial/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forgerock.tutorial;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4646B9B2806035A00F2B283 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = tutorial/tutorial.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = tutorial/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forgerock.tutorial;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4646B802806035900F2B283 /* Build configuration list for PBXProject "tutorial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4646B972806035A00F2B283 /* Debug */,
+				F4646B982806035A00F2B283 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4646B992806035A00F2B283 /* Build configuration list for PBXNativeTarget "tutorial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4646B9A2806035A00F2B283 /* Debug */,
+				F4646B9B2806035A00F2B283 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F4646B9C280603A500F2B283 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ForgeRock/forgerock-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 3.2.0;
+			};
+		};
+		F4A1E2AF281C029800EC680E /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ForgeRock/forgerock-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 3.2.0;
+			};
+		};
+		F4B69CB32816E1D700BE05A3 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ForgeRock/forgerock-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 3.2.0;
+			};
+		};
+		F4BE82E52809AE8D0088FBB2 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ForgeRock/forgerock-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 3.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F4646B9D280603A500F2B283 /* FRAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4646B9C280603A500F2B283 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */;
+			productName = FRAuth;
+		};
+		F4646B9F280603A500F2B283 /* FRCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4646B9C280603A500F2B283 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */;
+			productName = FRCore;
+		};
+		F4A1E2B0281C029800EC680E /* FRAuthenticator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4646B9C280603A500F2B283 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */;
+			productName = FRAuthenticator;
+		};
+		F4B69CB42816E1D700BE05A3 /* FRProximity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4646B9C280603A500F2B283 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */;
+			productName = FRProximity;
+		};
+		F4BE82E62809AE8D0088FBB2 /* FRGoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4646B9C280603A500F2B283 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */;
+			productName = FRGoogleSignIn;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F4646B7D2806035900F2B283 /* Project object */;
+}

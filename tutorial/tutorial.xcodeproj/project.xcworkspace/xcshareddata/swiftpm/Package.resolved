@@ -1,0 +1,59 @@
+{
+  "pins" : [
+    {
+      "identity" : "appauth-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/openid/AppAuth-iOS.git",
+      "state" : {
+        "revision" : "33660c271c961f8ce1084cc13f2ea8195e864f7d",
+        "version" : "1.5.0"
+      }
+    },
+    {
+      "identity" : "facebook-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/facebook/facebook-ios-sdk.git",
+      "state" : {
+        "revision" : "82dec0403c32d7b1d93529dcabb9fcb18f0825cc",
+        "version" : "9.1.0"
+      }
+    },
+    {
+      "identity" : "forgerock-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ForgeRock/forgerock-ios-sdk",
+      "state" : {
+        "revision" : "0896870efcf3be7679e650ee192a0ff7f972a949",
+        "version" : "3.2.0"
+      }
+    },
+    {
+      "identity" : "googlesignin-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/GoogleSignIn-iOS.git",
+      "state" : {
+        "revision" : "60ca2bfd218ccb194a746a79b41d9d50eb7e3af0",
+        "version" : "6.1.0"
+      }
+    },
+    {
+      "identity" : "gtm-session-fetcher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/gtm-session-fetcher.git",
+      "state" : {
+        "revision" : "eca9404a18f53727e4698211aaf2615eb93b962a",
+        "version" : "1.7.1"
+      }
+    },
+    {
+      "identity" : "gtmappauth",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/GTMAppAuth.git",
+      "state" : {
+        "revision" : "e803d09da0147fbf1bbb30e126c47ff43254e057",
+        "version" : "1.2.3"
+      }
+    }
+  ],
+  "version" : 2
+}

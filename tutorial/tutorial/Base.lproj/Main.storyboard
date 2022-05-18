@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LjE-Ol-xqS">
+                                <rect key="frame" x="50" y="94" width="314" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="jFX-fd-AgN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="l3n-2L-pLh">
+                                <rect key="frame" x="50" y="179" width="314" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="13" placeholder="YES" id="0g6-Jf-D4r"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9xm-LY-Ply">
+                                <rect key="frame" x="50" y="781" width="314" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laS-yU-MhW">
+                                        <rect key="frame" x="0.0" y="0.0" width="99.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Centr Login"/>
+                                        <connections>
+                                            <action selector="centralizedButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uJx-eo-icQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYR-dd-Nfx" userLabel="changePwd">
+                                        <rect key="frame" x="107.5" y="0.0" width="99" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Chg Pwd"/>
+                                        <connections>
+                                            <action selector="chgPwdButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SxH-ak-MSc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96L-6d-gwP" userLabel="nextButton">
+                                        <rect key="frame" x="214.5" y="0.0" width="99.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                        <connections>
+                                            <action selector="nextButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dFW-4R-xxW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9xm-LY-Ply" secondAttribute="trailing" constant="50" id="5es-8d-PYs"/>
+                            <constraint firstItem="LjE-Ol-xqS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Caf-q2-aol"/>
+                            <constraint firstItem="LjE-Ol-xqS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="PPc-yi-fcT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9xm-LY-Ply" secondAttribute="bottom" constant="50" id="SFF-pL-Z6k"/>
+                            <constraint firstItem="l3n-2L-pLh" firstAttribute="top" secondItem="LjE-Ol-xqS" secondAttribute="bottom" constant="50" id="YKa-3f-JvL"/>
+                            <constraint firstItem="l3n-2L-pLh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="bnM-Cd-GbC"/>
+                            <constraint firstItem="9xm-LY-Ply" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="d1s-wg-z48"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l3n-2L-pLh" secondAttribute="trailing" constant="50" id="ebx-8g-LN4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LjE-Ol-xqS" secondAttribute="trailing" constant="50" id="shs-kw-9Dv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="centralizedButton" destination="laS-yU-MhW" id="RJq-sg-8bY"/>
+                        <outlet property="chgPwdButton" destination="VYR-dd-Nfx" id="OLx-fs-LIZ"/>
+                        <outlet property="loginStackView" destination="l3n-2L-pLh" id="edx-9f-Ye9"/>
+                        <outlet property="nextButton" destination="96L-6d-gwP" id="Zg6-LN-HQu"/>
+                        <outlet property="statusLabel" destination="LjE-Ol-xqS" id="Ucj-SR-46x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

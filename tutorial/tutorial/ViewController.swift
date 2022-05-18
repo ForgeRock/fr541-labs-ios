@@ -239,51 +239,14 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
 
 
-                //DONE STAGE: if
-                if let stage = node.stage {
+                //TODO STAGE: if
 
-                    if stage == "namepass" {
-
-                        if let nameCallback = node.callbacks.first(where: {c in c.type == "NameCallback"}) as? NameCallback {
-
-                            let nameField = UITextField(frame: CGRect.zero)
-                            nameField.autocorrectionType = .no
-                            nameField.translatesAutoresizingMaskIntoConstraints = false
-                            nameField.backgroundColor = .white
-                            nameField.textColor = .black
-                            nameField.autocapitalizationType = .none
-                            nameField.borderStyle = .roundedRect
-                            nameField.placeholder = nameCallback.prompt
-
-                            self.loginStackView.addArrangedSubview(nameField)
-                            self.textFieldArray.append(nameField)
-                        }
-                        if let passwordCallback = node.callbacks.first(where: {c in c.type == "PasswordCallback"}) as? PasswordCallback {
-
-                            let pwdField = UITextField(frame: CGRect.zero)
-                            pwdField.autocorrectionType = .no
-                            pwdField.translatesAutoresizingMaskIntoConstraints = false
-                            pwdField.backgroundColor = .white
-                            pwdField.textColor = .black
-                            pwdField.autocapitalizationType = .none
-                            pwdField.borderStyle = .roundedRect
-                            pwdField.placeholder = passwordCallback.prompt
-
-
-
-                            //pwdField.isSecureTextEntry = true
-                            self.loginStackView.addArrangedSubview(pwdField)
-                            self.textFieldArray.append(pwdField)
-                        }
-                    }
 
                     //TODO SELFSERVICE: handle
 
 
 
-                }
 
-                else {
 
                     //MARK AUTH:
                     for callback: Callback in node.callbacks {
@@ -315,7 +278,7 @@ class ViewController: UIViewController {
                             self.loginStackView.addArrangedSubview(textField)
                             self.textFieldArray.append(textField)
                         }
-                        
+
                         //TODO REGISTER: attributes
 
 
@@ -352,8 +315,7 @@ class ViewController: UIViewController {
 
                     }
 
-                //DONE STAGE: else ends here
-                }
+                //TODO STAGE: else ends here:   }
 
             }
 

@@ -8,9 +8,14 @@
 import UIKit
 //DONE INIT: import FRAuth
 import FRAuth
+import FRDeviceBinding
 
 //DONE WEBAUTHN: protocols
 class ViewController: UIViewController, PlatformAuthenticatorRegistrationDelegate, PlatformAuthenticatorAuthenticationDelegate {
+    func localKeyExistsAndPasskeysAreAvailable() {
+        
+    }
+    
 
     //DONE SUSPENDED: variable
     var isSuspended = false
@@ -400,6 +405,47 @@ class ViewController: UIViewController, PlatformAuthenticatorRegistrationDelegat
                                 }
                             }
 
+                        }
+                        
+                        //DONE BINDING: handle binding callback
+                        else if let bindingCallback = node.callbacks.first as? DeviceBindingCallback {
+                            
+                            // Provide a friendly name for the device
+                            bindingCallback.setDeviceName("iOS Simulator")
+                            
+                            // Bind the device
+                            bindingCallback.bind() { result in
+                                switch result {
+                                case .success:
+                                    print("binding success")
+                                    node.next { (user: FRUser?, node, error) in
+                                        self.handleNode(user: user, node: node, error: error)
+                                    }
+                                    // Proceed to the next node
+                                case .failure(let error):
+                                    print("binding failure \(String(describing: error))")
+                                    // Handle the error and proceed to the next node
+                                }
+                            }
+                        }
+                        
+                        //DONE BINDING: handle signing callback
+                        else if let signingCallback = node.callbacks.first as? DeviceSigningVerifierCallback {
+                            
+                            signingCallback.sign() { result in
+                                switch result {
+                                case .success:
+                                    print ("signing success")
+                                    node.next { (user: FRUser?, node, error) in
+                                        self.handleNode(user: user, node: node, error: error)
+                                    }
+                                    // Proceed to the next node
+                                case .failure(let error):
+                                    print("signing failure \(String(describing: error))")
+                                    // Handle the error and proceed to the next node
+                                }
+                            }
+                            
                         }
 
                         //DONE DEVICE: we need a choiceCallback to simulate 2nd factor

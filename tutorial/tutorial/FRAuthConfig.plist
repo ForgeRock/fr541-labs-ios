@@ -19,7 +19,7 @@
 	<key>forgerock_timeout</key>
 	<string>60</string>
 	<key>forgerock_auth_service_name</key>
-	<string>fr541</string>
+	<string>fr541-devicebinding</string>
 	<key>forgerock_registration_service_name</key>
 	<string>Registration</string>
 </dict>

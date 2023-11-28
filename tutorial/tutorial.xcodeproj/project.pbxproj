@@ -12,13 +12,15 @@
 		F4646B902806035900F2B283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4646B8E2806035900F2B283 /* Main.storyboard */; };
 		F4646B922806035A00F2B283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4646B912806035A00F2B283 /* Assets.xcassets */; };
 		F4646B952806035A00F2B283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4646B932806035A00F2B283 /* LaunchScreen.storyboard */; };
-		F4646B9E280603A500F2B283 /* FRAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F4646B9D280603A500F2B283 /* FRAuth */; };
-		F4646BA0280603A500F2B283 /* FRCore in Frameworks */ = {isa = PBXBuildFile; productRef = F4646B9F280603A500F2B283 /* FRCore */; };
 		F4646BA22806047300F2B283 /* FRAuthConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4646BA12806047300F2B283 /* FRAuthConfig.plist */; };
 		F4905BE92811ADE400575C8C /* UIStackViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4905BE82811ADE400575C8C /* UIStackViewExt.swift */; };
-		F4A1E2B1281C029800EC680E /* FRAuthenticator in Frameworks */ = {isa = PBXBuildFile; productRef = F4A1E2B0281C029800EC680E /* FRAuthenticator */; };
-		F4B69CB52816E1D700BE05A3 /* FRProximity in Frameworks */ = {isa = PBXBuildFile; productRef = F4B69CB42816E1D700BE05A3 /* FRProximity */; };
-		F4BE82E72809AE8D0088FBB2 /* FRGoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = F4BE82E62809AE8D0088FBB2 /* FRGoogleSignIn */; };
+		F49D8EE22B159E070098461F /* FRAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F49D8EE12B159E070098461F /* FRAuth */; };
+		F49D8EE42B159E070098461F /* FRAuthenticator in Frameworks */ = {isa = PBXBuildFile; productRef = F49D8EE32B159E070098461F /* FRAuthenticator */; };
+		F49D8EE62B159E070098461F /* FRCore in Frameworks */ = {isa = PBXBuildFile; productRef = F49D8EE52B159E070098461F /* FRCore */; };
+		F49D8EE82B159E080098461F /* FRFacebookSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = F49D8EE72B159E080098461F /* FRFacebookSignIn */; };
+		F49D8EEA2B159E080098461F /* FRGoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = F49D8EE92B159E080098461F /* FRGoogleSignIn */; };
+		F49D8EEC2B159E080098461F /* FRProximity in Frameworks */ = {isa = PBXBuildFile; productRef = F49D8EEB2B159E080098461F /* FRProximity */; };
+		F49D8EEE2B159E080098461F /* FRUI in Frameworks */ = {isa = PBXBuildFile; productRef = F49D8EED2B159E080098461F /* FRUI */; };
 		F4D2B8EA28215A41004A4700 /* ForceAuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2B8E928215A41004A4700 /* ForceAuthInterceptor.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,11 +43,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4B69CB52816E1D700BE05A3 /* FRProximity in Frameworks */,
-				F4646B9E280603A500F2B283 /* FRAuth in Frameworks */,
-				F4BE82E72809AE8D0088FBB2 /* FRGoogleSignIn in Frameworks */,
-				F4646BA0280603A500F2B283 /* FRCore in Frameworks */,
-				F4A1E2B1281C029800EC680E /* FRAuthenticator in Frameworks */,
+				F49D8EE42B159E070098461F /* FRAuthenticator in Frameworks */,
+				F49D8EE22B159E070098461F /* FRAuth in Frameworks */,
+				F49D8EEC2B159E080098461F /* FRProximity in Frameworks */,
+				F49D8EE82B159E080098461F /* FRFacebookSignIn in Frameworks */,
+				F49D8EEE2B159E080098461F /* FRUI in Frameworks */,
+				F49D8EE62B159E070098461F /* FRCore in Frameworks */,
+				F49D8EEA2B159E080098461F /* FRGoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,11 +106,13 @@
 			);
 			name = tutorial;
 			packageProductDependencies = (
-				F4646B9D280603A500F2B283 /* FRAuth */,
-				F4646B9F280603A500F2B283 /* FRCore */,
-				F4BE82E62809AE8D0088FBB2 /* FRGoogleSignIn */,
-				F4B69CB42816E1D700BE05A3 /* FRProximity */,
-				F4A1E2B0281C029800EC680E /* FRAuthenticator */,
+				F49D8EE12B159E070098461F /* FRAuth */,
+				F49D8EE32B159E070098461F /* FRAuthenticator */,
+				F49D8EE52B159E070098461F /* FRCore */,
+				F49D8EE72B159E080098461F /* FRFacebookSignIn */,
+				F49D8EE92B159E080098461F /* FRGoogleSignIn */,
+				F49D8EEB2B159E080098461F /* FRProximity */,
+				F49D8EED2B159E080098461F /* FRUI */,
 			);
 			productName = tutorial;
 			productReference = F4646B852806035900F2B283 /* tutorial.app */;
@@ -399,61 +405,75 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ForgeRock/forgerock-ios-sdk";
 			requirement = {
-				kind = exactVersion;
-				version = 3.2.0;
+				kind = versionRange;
+				maximumVersion = 4.1.0;
+				minimumVersion = 3.2.0;
 			};
 		};
 		F4A1E2AF281C029800EC680E /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ForgeRock/forgerock-ios-sdk";
 			requirement = {
-				kind = exactVersion;
-				version = 3.2.0;
+				kind = versionRange;
+				maximumVersion = 4.1.0;
+				minimumVersion = 3.2.0;
 			};
 		};
 		F4B69CB32816E1D700BE05A3 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ForgeRock/forgerock-ios-sdk";
 			requirement = {
-				kind = exactVersion;
-				version = 3.2.0;
+				kind = versionRange;
+				maximumVersion = 4.1.0;
+				minimumVersion = 3.2.0;
 			};
 		};
 		F4BE82E52809AE8D0088FBB2 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ForgeRock/forgerock-ios-sdk";
 			requirement = {
-				kind = exactVersion;
-				version = 3.2.0;
+				kind = versionRange;
+				maximumVersion = 4.1.0;
+				minimumVersion = 3.2.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F4646B9D280603A500F2B283 /* FRAuth */ = {
+		F49D8EE12B159E070098461F /* FRAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F4646B9C280603A500F2B283 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */;
 			productName = FRAuth;
 		};
-		F4646B9F280603A500F2B283 /* FRCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F4646B9C280603A500F2B283 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */;
-			productName = FRCore;
-		};
-		F4A1E2B0281C029800EC680E /* FRAuthenticator */ = {
+		F49D8EE32B159E070098461F /* FRAuthenticator */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F4646B9C280603A500F2B283 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */;
 			productName = FRAuthenticator;
 		};
-		F4B69CB42816E1D700BE05A3 /* FRProximity */ = {
+		F49D8EE52B159E070098461F /* FRCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4646B9C280603A500F2B283 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */;
+			productName = FRCore;
+		};
+		F49D8EE72B159E080098461F /* FRFacebookSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4646B9C280603A500F2B283 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */;
+			productName = FRFacebookSignIn;
+		};
+		F49D8EE92B159E080098461F /* FRGoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4646B9C280603A500F2B283 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */;
+			productName = FRGoogleSignIn;
+		};
+		F49D8EEB2B159E080098461F /* FRProximity */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F4646B9C280603A500F2B283 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */;
 			productName = FRProximity;
 		};
-		F4BE82E62809AE8D0088FBB2 /* FRGoogleSignIn */ = {
+		F49D8EED2B159E080098461F /* FRUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F4646B9C280603A500F2B283 /* XCRemoteSwiftPackageReference "forgerock-ios-sdk" */;
-			productName = FRGoogleSignIn;
+			productName = FRUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

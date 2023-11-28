@@ -21,6 +21,10 @@
 		F49D8EEA2B159E080098461F /* FRGoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = F49D8EE92B159E080098461F /* FRGoogleSignIn */; };
 		F49D8EEC2B159E080098461F /* FRProximity in Frameworks */ = {isa = PBXBuildFile; productRef = F49D8EEB2B159E080098461F /* FRProximity */; };
 		F49D8EEE2B159E080098461F /* FRUI in Frameworks */ = {isa = PBXBuildFile; productRef = F49D8EED2B159E080098461F /* FRUI */; };
+		F49D8EF42B15AD930098461F /* Screenshot 2023-11-28 at 05.56.58.png in Resources */ = {isa = PBXBuildFile; fileRef = F49D8EF02B15AD930098461F /* Screenshot 2023-11-28 at 05.56.58.png */; };
+		F49D8EF52B15AD930098461F /* Screenshot 2023-11-28 at 05.57.28.png in Resources */ = {isa = PBXBuildFile; fileRef = F49D8EF12B15AD930098461F /* Screenshot 2023-11-28 at 05.57.28.png */; };
+		F49D8EF62B15AD930098461F /* Screenshot 2023-11-28 at 05.57.06.png in Resources */ = {isa = PBXBuildFile; fileRef = F49D8EF22B15AD930098461F /* Screenshot 2023-11-28 at 05.57.06.png */; };
+		F49D8EF72B15AD930098461F /* Screenshot 2023-11-28 at 05.57.13.png in Resources */ = {isa = PBXBuildFile; fileRef = F49D8EF32B15AD930098461F /* Screenshot 2023-11-28 at 05.57.13.png */; };
 		F4D2B8EA28215A41004A4700 /* ForceAuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2B8E928215A41004A4700 /* ForceAuthInterceptor.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +38,11 @@
 		F4646B962806035A00F2B283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4646BA12806047300F2B283 /* FRAuthConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FRAuthConfig.plist; sourceTree = "<group>"; };
 		F4905BE82811ADE400575C8C /* UIStackViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExt.swift; sourceTree = "<group>"; };
+		F49D8EEF2B15AAF10098461F /* README-devicebinding.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "README-devicebinding.md"; sourceTree = "<group>"; };
+		F49D8EF02B15AD930098461F /* Screenshot 2023-11-28 at 05.56.58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2023-11-28 at 05.56.58.png"; sourceTree = "<group>"; };
+		F49D8EF12B15AD930098461F /* Screenshot 2023-11-28 at 05.57.28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2023-11-28 at 05.57.28.png"; sourceTree = "<group>"; };
+		F49D8EF22B15AD930098461F /* Screenshot 2023-11-28 at 05.57.06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2023-11-28 at 05.57.06.png"; sourceTree = "<group>"; };
+		F49D8EF32B15AD930098461F /* Screenshot 2023-11-28 at 05.57.13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2023-11-28 at 05.57.13.png"; sourceTree = "<group>"; };
 		F4A1E2B6281D30E200EC680E /* tutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tutorial.entitlements; sourceTree = "<group>"; };
 		F4D2B8E928215A41004A4700 /* ForceAuthInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceAuthInterceptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +84,10 @@
 		F4646B872806035900F2B283 /* tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				F49D8EF02B15AD930098461F /* Screenshot 2023-11-28 at 05.56.58.png */,
+				F49D8EF22B15AD930098461F /* Screenshot 2023-11-28 at 05.57.06.png */,
+				F49D8EF32B15AD930098461F /* Screenshot 2023-11-28 at 05.57.13.png */,
+				F49D8EF12B15AD930098461F /* Screenshot 2023-11-28 at 05.57.28.png */,
 				F4A1E2B6281D30E200EC680E /* tutorial.entitlements */,
 				F4646B882806035900F2B283 /* AppDelegate.swift */,
 				F4646B8C2806035900F2B283 /* ViewController.swift */,
@@ -85,6 +98,7 @@
 				F4646BA12806047300F2B283 /* FRAuthConfig.plist */,
 				F4905BE82811ADE400575C8C /* UIStackViewExt.swift */,
 				F4D2B8E928215A41004A4700 /* ForceAuthInterceptor.swift */,
+				F49D8EEF2B15AAF10098461F /* README-devicebinding.md */,
 			);
 			path = tutorial;
 			sourceTree = "<group>";
@@ -163,9 +177,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4646BA22806047300F2B283 /* FRAuthConfig.plist in Resources */,
+				F49D8EF72B15AD930098461F /* Screenshot 2023-11-28 at 05.57.13.png in Resources */,
+				F49D8EF42B15AD930098461F /* Screenshot 2023-11-28 at 05.56.58.png in Resources */,
 				F4646B952806035A00F2B283 /* LaunchScreen.storyboard in Resources */,
 				F4646B922806035A00F2B283 /* Assets.xcassets in Resources */,
 				F4646B902806035900F2B283 /* Main.storyboard in Resources */,
+				F49D8EF62B15AD930098461F /* Screenshot 2023-11-28 at 05.57.06.png in Resources */,
+				F49D8EF52B15AD930098461F /* Screenshot 2023-11-28 at 05.57.28.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

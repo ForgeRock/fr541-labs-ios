@@ -8,9 +8,15 @@
 import UIKit
 //DONE INIT: import FRAuth
 import FRAuth
+import FRCore
 
 //DONE WEBAUTHN: protocols
 class ViewController: UIViewController, PlatformAuthenticatorRegistrationDelegate, PlatformAuthenticatorAuthenticationDelegate {
+    
+    func localKeyExistsAndPasskeysAreAvailable() {
+        //TODO
+    }
+    
 
     //DONE SUSPENDED: variable
     var isSuspended = false
@@ -186,8 +192,26 @@ class ViewController: UIViewController, PlatformAuthenticatorRegistrationDelegat
                 self.textFieldArray = [UITextField]()
                 self.loginStackView.removeAllArrangedSubviews()
 
-                thisNode.next { (user: FRUser?, node, error) in
-                    self.handleNode(user: user, node: node, error: error)
+                //DONE SELFSERVICE: Handle next
+                // Handle differently based on whether we're changing password or not
+                if isChangingPwd {
+                    thisNode.next { (token: Token?, node, error) in
+                        if let _ = token {
+                            // Password change completed successfully
+                            self.isChangingPwd = false
+                            DispatchQueue.main.async {
+                                self.statusLabel.text = "Password changed successfully"
+                                self.updateStatus()
+                            }
+                        } else {
+                            // Still in password change flow
+                            self.handleNode(user: nil, node: node, error: error)
+                        }
+                    }
+                } else {
+                    thisNode.next { (user: FRUser?, node, error) in
+                        self.handleNode(user: user, node: node, error: error)
+                    }
                 }
             }
         }
@@ -248,10 +272,12 @@ class ViewController: UIViewController, PlatformAuthenticatorRegistrationDelegat
             print("User is authenticated")
 
             //DONE SELFSERVICE: state 5
-            self.isChangingPwd = false
-
-            DispatchQueue.main.async {
-                self.updateStatus()
+            // Only reset password change state if we're not in the middle of changing password
+            if !isChangingPwd || (node == nil && isChangingPwd) {
+                self.isChangingPwd = false
+                DispatchQueue.main.async {
+                    self.updateStatus()
+                }
             }
         }
 
@@ -301,33 +327,34 @@ class ViewController: UIViewController, PlatformAuthenticatorRegistrationDelegat
                     }
 
                     //DONE SELFSERVICE: handle
-                    else if stage == "pwdchange" {
-                        let oldPwdField = UITextField(frame: CGRect.zero)
-                        oldPwdField.autocorrectionType = .no
-                        oldPwdField.translatesAutoresizingMaskIntoConstraints = false
-                        oldPwdField.backgroundColor = .white
-                        oldPwdField.textColor = .black
-                        oldPwdField.autocapitalizationType = .none
-                        oldPwdField.borderStyle = .roundedRect
+                    else if stage == "currentpwd" {
+                            let oldPwdField = UITextField(frame: CGRect.zero)
+                            oldPwdField.autocorrectionType = .no
+                            oldPwdField.translatesAutoresizingMaskIntoConstraints = false
+                            oldPwdField.backgroundColor = .white
+                            oldPwdField.textColor = .black
+                            oldPwdField.autocapitalizationType = .none
+                            oldPwdField.borderStyle = .roundedRect
+                            oldPwdField.placeholder = "Enter current password"
+                            //oldPwdField.isSecureTextEntry = true
 
-                        oldPwdField.placeholder = "Enter current password"
-                        //oldPwdField.isSecureTextEntry = true
+                            self.loginStackView.addArrangedSubview(oldPwdField)
+                            self.textFieldArray.append(oldPwdField)
 
-                        self.loginStackView.addArrangedSubview(oldPwdField)
-                        self.textFieldArray.append(oldPwdField)
+                    }
+                    else if stage == "newpwd" {
+                            let newPwdField = UITextField(frame: CGRect.zero)
+                            newPwdField.autocorrectionType = .no
+                            newPwdField.translatesAutoresizingMaskIntoConstraints = false
+                            newPwdField.backgroundColor = .white
+                            newPwdField.textColor = .black
+                            newPwdField.autocapitalizationType = .none
+                            newPwdField.borderStyle = .roundedRect
+                            newPwdField.placeholder = "Enter new password"
+                            //newPwdField.isSecureTextEntry = true
 
-                        let newPwdField = UITextField(frame: CGRect.zero)
-                        newPwdField.autocorrectionType = .no
-                        newPwdField.translatesAutoresizingMaskIntoConstraints = false
-                        newPwdField.backgroundColor = .white
-                        newPwdField.textColor = .black
-                        newPwdField.autocapitalizationType = .none
-                        newPwdField.borderStyle = .roundedRect
-                        newPwdField.placeholder = "Enter new password"
-
-                        //newPwdField.isSecureTextEntry = true
-                        self.loginStackView.addArrangedSubview(newPwdField)
-                        self.textFieldArray.append(newPwdField)
+                            self.loginStackView.addArrangedSubview(newPwdField)
+                            self.textFieldArray.append(newPwdField)
                     }
 
                 }
@@ -502,4 +529,3 @@ class ViewController: UIViewController, PlatformAuthenticatorRegistrationDelegat
 
     }
 }
-

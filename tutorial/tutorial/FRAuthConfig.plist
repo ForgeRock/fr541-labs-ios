@@ -11,9 +11,9 @@
 	<key>forgerock_oauth_threshold</key>
 	<string>60</string>
 	<key>forgerock_url</key>
-	<string>https://openam-fr300-unigeza.forgeblocks.com/am</string>
+	<string>https://yourtenant.forgeblocks.com/am</string>
 	<key>forgerock_cookie_name</key>
-	<string>af6e3c362736235</string>
+	<string>a2d5f077c3cc05b</string>
 	<key>forgerock_realm</key>
 	<string>alpha</string>
 	<key>forgerock_timeout</key>

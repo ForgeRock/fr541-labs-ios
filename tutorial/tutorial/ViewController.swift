@@ -8,6 +8,7 @@
 import UIKit
 //DONE INIT: import FRAuth
 import FRAuth
+import FRCore
 
 //TODO WEBAUTHN: protocols
 class ViewController: UIViewController {
@@ -176,8 +177,26 @@ class ViewController: UIViewController {
                 self.textFieldArray = [UITextField]()
                 self.loginStackView.removeAllArrangedSubviews()
 
-                thisNode.next { (user: FRUser?, node, error) in
-                    self.handleNode(user: user, node: node, error: error)
+                //DONE SELFSERVICE: Handle next
+                // Handle differently based on whether we're changing password or not
+                if isChangingPwd {
+                    thisNode.next { (token: Token?, node, error) in
+                        if let _ = token {
+                            // Password change completed successfully
+                            self.isChangingPwd = false
+                            DispatchQueue.main.async {
+                                self.statusLabel.text = "Password changed successfully"
+                                self.updateStatus()
+                            }
+                        } else {
+                            // Still in password change flow
+                            self.handleNode(user: nil, node: node, error: error)
+                        }
+                    }
+                } else {
+                    thisNode.next { (user: FRUser?, node, error) in
+                        self.handleNode(user: user, node: node, error: error)
+                    }
                 }
             }
         }
@@ -364,4 +383,3 @@ class ViewController: UIViewController {
 
     }
 }
-

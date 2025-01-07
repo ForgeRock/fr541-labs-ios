@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B5F3BC72D11AAB000761712 /* FRAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5B5F3BC62D11AAB000761712 /* FRAuth */; };
+		5B5F3BC92D11AAB000761712 /* FRCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5B5F3BC82D11AAB000761712 /* FRCore */; };
+		5B5F3BCB2D11AAB000761712 /* FRGoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 5B5F3BCA2D11AAB000761712 /* FRGoogleSignIn */; };
 		F4646B892806035900F2B283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4646B882806035900F2B283 /* AppDelegate.swift */; };
 		F4646B8D2806035900F2B283 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4646B8C2806035900F2B283 /* ViewController.swift */; };
 		F4646B902806035900F2B283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4646B8E2806035900F2B283 /* Main.storyboard */; };

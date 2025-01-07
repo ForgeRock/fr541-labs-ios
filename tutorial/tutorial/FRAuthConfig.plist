@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+~  Copyright (c) 2022 ForgeRock. All rights reserved.
+~
+~  This software may be modified and distributed under the terms
+~  of the MIT license. See the LICENSE file for details.
+-->
 <plist version="1.0">
 <dict>
 	<key>forgerock_oauth_client_id</key>
@@ -11,9 +17,9 @@
 	<key>forgerock_oauth_threshold</key>
 	<string>60</string>
 	<key>forgerock_url</key>
-	<string>https://openam-fr300-unigeza.forgeblocks.com/am</string>
+	<string>https://yourtenant.forgeblocks.com/am</string>
 	<key>forgerock_cookie_name</key>
-	<string>af6e3c362736235</string>
+	<string>a2d5f077c3cc05b</string>
 	<key>forgerock_realm</key>
 	<string>alpha</string>
 	<key>forgerock_timeout</key>

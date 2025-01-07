@@ -177,26 +177,10 @@ class ViewController: UIViewController {
                 self.textFieldArray = [UITextField]()
                 self.loginStackView.removeAllArrangedSubviews()
 
-                //DONE SELFSERVICE: Handle next
-                // Handle differently based on whether we're changing password or not
-                if isChangingPwd {
-                    thisNode.next { (token: Token?, node, error) in
-                        if let _ = token {
-                            // Password change completed successfully
-                            self.isChangingPwd = false
-                            DispatchQueue.main.async {
-                                self.statusLabel.text = "Password changed successfully"
-                                self.updateStatus()
-                            }
-                        } else {
-                            // Still in password change flow
-                            self.handleNode(user: nil, node: node, error: error)
-                        }
-                    }
-                } else {
-                    thisNode.next { (user: FRUser?, node, error) in
-                        self.handleNode(user: user, node: node, error: error)
-                    }
+                //TODO SELFSERVICE: Handle next
+
+                thisNode.next { (user: FRUser?, node, error) in
+                    self.handleNode(user: user, node: node, error: error)
                 }
             }
         }
